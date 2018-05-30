@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>360 Fitness</title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	#logo{
+	height: 100px;
+	width:100px;
+}
+#header{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 52px;
+	font-weight: bold;
+	line-height: 26.4px;
+	vertical-align: middle;
+	width: auto;
+}
+#header img{
+	vertical-align: middle;
+}
+#content{
+	margin-top:10%;
+
+}
+#content img{
+	margin:5px;
+}
+body{
+	margin-left: 120px;
+	margin-right: 120px;
+}
+.img-with-text {
+    text-align: center;
+    width: 80px;
+	margin-left: 50px;
+}
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+</style>
+	</head>
+	<body>
+		<div id="header">
+			<img src="{% static 'front/images/logo.jpeg' %}">
+			<span>360 Fitness</span>
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><img src="{% static 'front/images/logout.png' %}"><p>Log Out</p></div>
+			</div>
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><img src="{% static 'front/images/contact.png' %}"><p>Contact</p></div>
+			</div>
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><a href="{% url 'front:home' %}"><img src="{% static 'front/images/home.png' %}"></a><p>Home</p></div>
+			</div>
+		</div>
+		<div id="content">
+
+<div class="container">
+		<button type="button" data-toggle="collapse" data-target="#demo2">Abs</button>
+  <div id="demo2" class="collapse">
+
+
+	  <table>
+		  {% for ab in Abs %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+  </div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo1">Back</button>
+  <div id="demo1" class="collapse">
+
+
+	  <table>
+		  {% for ab in Back %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+  </div>
+	<br>
+
+	  <button type="button" data-toggle="collapse" data-target="#demo3">Chest</button>
+  <div id="demo3" class="collapse">
+
+
+	  <table>
+		  {% for ab in Chest %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo4">Legs</button>
+  <div id="demo4" class="collapse">
+
+
+	  <table>
+		  {% for ab in Legs %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo5">Shoulders</button>
+  <div id="demo5" class="collapse">
+
+
+	  <table>
+		  {% for ab in Shoulders %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+	  </div>
+	<br>
+
+	  <button type="button" data-toggle="collapse" data-target="#demo6">Biceps</button>
+  <div id="demo6" class="collapse">
+
+
+	  <table>
+		  {% for ab in Biceps %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo7">Triceps</button>
+  <div id="demo7" class="collapse">
+
+
+	  <table>
+		  {% for ab in Triceps %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo8">Forearm</button>
+  <div id="demo8" class="collapse">
+
+
+	  <table>
+		  {% for ab in Forearm %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo9">Lats</button>
+  <div id="demo9" class="collapse">
+
+
+	  <table>
+		  {% for ab in Lats %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo10">Middle Back</button>
+  <div id="demo10" class="collapse">
+
+
+	  <table>
+		  {% for ab in Middleback %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo11">Lower Back</button>
+  <div id="demo11" class="collapse">
+
+
+	  <table>
+		  {% for ab in Lowerback %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo12">Neck</button>
+  <div id="demo12" class="collapse">
+
+
+	  <table>
+		  {% for ab in Neck %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+	  </div>
+	<br>
+
+	  <button type="button" data-toggle="collapse" data-target="#demo13">Quadriceps</button>
+  <div id="demo13" class="collapse">
+
+
+	  <table>
+		  {% for ab in Quadriceps %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+	  </div>
+	<br>
+
+	  <button type="button" data-toggle="collapse" data-target="#demo14">Hamstrings</button>
+  <div id="demo14" class="collapse">
+
+
+	  <table>
+		  {% for ab in Hamstrings %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo15">Calves</button>
+  <div id="demo15" class="collapse">
+
+
+	  <table>
+		  {% for ab in Calves %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	  <button type="button" data-toggle="collapse" data-target="#demo16">Abdominals</button>
+  <div id="demo16" class="collapse">
+
+
+	  <table>
+		  {% for ab in Abdominals %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+	  </div>
+	<br>
+
+	  <button type="button" data-toggle="collapse" data-target="#demo17">Glutes</button>
+  <div id="demo17" class="collapse">
+
+
+	  <table>
+		  {% for ab in Abs %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+	   <button type="button" data-toggle="collapse" data-target="#demo18">Traps</button>
+  <div id="demo18" class="collapse">
+
+
+	  <table>
+		  {% for ab in Traps %}
+		  <tr>
+			  <td> {{ ab.exercise }}</td>
+			   <td> {{ ab.description }}</td>
+		  </tr>
+		  {% endfor %}
+	  </table>
+</div>
+	<br>
+  </div>
+</div>
+
+		</div>
+	</body>
+<html>

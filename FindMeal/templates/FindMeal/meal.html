@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<title>360 Fitness</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'front/style.css' %}">
+		
+
+	</head>
+	<body>
+		<div id="header">
+			<img src="{% static 'front/images/logo.jpeg' %}">
+			<span>360 Fitness</span>
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><img src="{% static 'front/images/logout.png' %}"><p>Log Out</p></div>
+			</div>	
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><img src="{% static 'front/images/contact.png' %}"><p>Contact</p></div>
+			</div>
+			<div style="font-size:20px; float:right;">
+				<div class="img-with-text"><a href="{% url 'front:home' %}"><img src="{% static 'front/images/home.png' %}"></a><p>Home</p></div>
+			</div>
+		</div>
+		<div id="content">
+		<a href="{% url 'FindMeal:index' %}"><img src="{% static 'front/images/whattoeat.png' %}"></a><a href="{% url 'FindMeal:allmealplans' %}"><img src="{% static 'front/images/mymealplans.png' %}"></a>
+		</div>
+	</body>
+<html>	
